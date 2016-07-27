@@ -15,9 +15,6 @@ var Queue = function() {
   };
 
   someInstance.dequeue = function() {
-    // get array of keys in storage
-    // var keys = Object.keys(storage);
-    // store first item in queue @ key 0
     var value = storage[0];
     delete storage[0];
     size--;
