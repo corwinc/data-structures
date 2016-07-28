@@ -11,7 +11,7 @@ var Stack = function() {
     size++; 
 
     console.log('value:', value);
-    console.log('value:', storage);
+    console.log('storage:', storage);
   };
 
   someInstance.pop = function() {
@@ -20,7 +20,7 @@ var Stack = function() {
     }
 
     var value = storage[size]; 
-    delete storage[size]; 
+    delete value; 
     
 
     console.log('value:', value);
