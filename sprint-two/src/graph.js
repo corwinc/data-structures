@@ -1,9 +1,6 @@
 // Instantiate a new graph
 var Graph = function() {
-  // 1 : {value: }
-  // 2 : {}
-  // nodes : {1 : {value: ...}, 
-  //2 : {}}
+  // this._storage = {};
   this.nodes = {}; 
 };
 
