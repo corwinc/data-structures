@@ -46,17 +46,13 @@ BinarySearchTree.methods.contains = function (value) {
       if (currentNode.left === null) {
         // return false;
       } else {
-        if ( search(currentNode.left, value)) {
-          return true; 
-        }
+        return (search(currentNode.left, value));
       }
     } else if (value > currentNode.value) {
       if (currentNode.right === null) {
         // return false;
       } else {
-        if (search(currentNode.right, value)) {
-          return true; 
-        }
+        return (search(currentNode.right, value));
       }
     }
     return false;
