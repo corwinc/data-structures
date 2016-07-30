@@ -44,26 +44,36 @@ BinarySearchTree.methods.contains = function (value) {
       return true;
     } else if (value < currentNode.value) {
       if (currentNode.left === null) {
-        // return false;
+        return false;
       } else {
-        return (search(currentNode.left, value));
+        return search(currentNode.left, value);
       }
     } else if (value > currentNode.value) {
       if (currentNode.right === null) {
-        // return false;
+        return false;
       } else {
-        return (search(currentNode.right, value));
+        return search(currentNode.right, value);
       }
     }
-    return false;
   };
 
   return search(node, value);
 
 };
 
-BinarySearchTree.methods.depthFirstLog = function () {
+BinarySearchTree.methods.depthFirstLog = function (cb, node) {
+  var node = node || this;
 
+  cb(node.value);
+
+  if (node.left) {
+    this.depthFirstLog(cb, node.left);
+  }
+
+  if (node.right) {
+    this.depthFirstLog(cb, node.right);
+  }
+  
 };
 
 
